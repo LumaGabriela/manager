@@ -123,11 +123,13 @@ const Body = ({data, setData}) => {
             <button onClick={ handleClick } className={`btn ${ toggleVisibility === false ? 'show' : 'notshow'}`}>Ver</button>
             {count.map((item, i) => (
             <div key={i} id={i} className={`ficha ${ toggleVisibility === true ? visibility[i] : ''} `}>
-                <h4>{data.nome}</h4>
-                <h4>Pix(CPF): {data.pix}</h4>
-                <h4>Data da parcela: {data.listadatas[i]}</h4>
-                <h4>Valor da parcela: R${(data.valor/data.parcela).toFixed(2)}</h4>         
-                <h4>{i}//{visibility[i]}//{mainmonth}</h4>
+                <div>
+                    <h4>{data.nome}</h4>
+                    <h4>Pix(CPF): {data.pix}</h4>
+                    <h4>Data da parcela: {data.listadatas[i]}</h4>
+                    <h4>Valor da parcela: R${(data.valor/data.parcela).toFixed(2)}</h4>         
+                </div>
+                <div className="assinatura"/>
             </div>)
             )}
         </BodyContainer>

@@ -9,11 +9,12 @@ const BodyContainer = styled.main`
     flex-direction: column;
 
     div.ficha{
-        width: 90%;
+        width: 100%;
         margin: 0;
         padding:1rem .5rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         border-top: 1px solid gray;
     }
     .ficha.invisible {display: none}
@@ -31,6 +32,19 @@ const BodyContainer = styled.main`
     }
     .notshow{
         background: #EF767A;
+    }
+    .assinatura{
+        width: 13rem; height: 3rem;
+        border-radius: 15px;
+        border: 2px solid black;
+        margin: auto 0 0;
+        
+    }
+    .assinatura::before {
+        content: 'Assinatura';
+        display: block;
+        font-weight: bolder;
+        transform: translate( 60px, -20px) ;
     }
   
 `
